@@ -6,38 +6,49 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>sc.fiji</groupId>
-		<artifactId>pom-fiji</artifactId>
-		<version>24.0.0</version>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>14.0.0</version>
 		<relativePath />
 	</parent>
 
 	<groupId>com.github.vcaldas</groupId>
 	<artifactId>VCPlugins_</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>0.1.0-SNAPSHOT</version>
 
 	<name>VC ImageJ Plugins and Tools</name>
 	<url>https://github.com/vcaldas/vcplugins</url>
 	<inceptionYear>2016</inceptionYear>
+	
 	<organization>
 		<name>Victor Caldas</name>
 		<url>www.victorcaldas.com</url>
 	</organization>
+	
 	<licenses>
 		<license>
-			<name>CC0 1.0 Universal License</name>
-			<url>http://creativecommons.org/publicdomain/zero/1.0/</url>
+			<name>GNU General Public License v3+</name>
+			<url>https://www.gnu.org/licenses/gpl.html</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
 
 	<developers>
 		<developer>
-			<id>[MY-GITHUB-ID]</id>
-			<name>[MY-FULL-NAME]</name>
-			<url>https://imagej.net/User:[MY-IMAGEJ-WIKI-ACCOUNT]</url>
+			<id>vcaldas</id>
+			<name>Victor Caldas</name>
+			<url>https://imagej.net/User:Vcaldas</url>
+			<roles>
+				<role>lead</role>
+				<role>developer</role>
+				<role>debugger</role>
+				<role>reviewer</role>
+				<role>support</role>
+				<role>maintainer</role>
+			</roles>
 		</developer>
 	</developers>
+	
 	<contributors>
 		<contributor>
 			<name>None</name>
@@ -57,20 +68,32 @@
 		<tag>HEAD</tag>
 		<url>https://github.com/vcaldas/vcplugins</url>
 	</scm>
+	
 	<issueManagement>
 		<system>GitHub Issues</system>
 		<url>http://github.com/vcaldas/vcplugins/issues</url>
 	</issueManagement>
+	
 	<ciManagement>
 		<system>None</system>
 	</ciManagement>
 
 	<properties>
-		<main-class>VCPlugins</main-class>
-		<license.licenseName>cc0</license.licenseName>
-		<license.copyrightOwners>N/A</license.copyrightOwners>
-		<license.projectName>ImageJ software for multidimensional image processing and analysis.</license.projectName>
+		<main-class>IJPlugins</main-class>
+		<license.licenseName>gpl_v3</license.licenseName>
+		<license.copyrightOwners>Victor Caldas.</license.copyrightOwners>
+		<license.projectName>ImageJ Plugins collection.</license.projectName>
 	</properties>
+	
+	<repositories>
+		<repository>
+			<id>imagej.public</id>
+			<url>http://maven.imagej.net/content/groups/public</url>
+		</repository>
+	</repositories>
+	
+	
+	
 	
 <build>
 		<resources>
@@ -127,12 +150,6 @@
 		</plugins>
 </build>
 
-	<repositories>
-		<repository>
-			<id>imagej.public</id>
-			<url>http://maven.imagej.net/content/groups/public</url>
-		</repository>
-	</repositories>
 
 	<dependencies>
 		<dependency>
@@ -144,5 +161,5 @@
 			<artifactId>imglib2-ij</artifactId>
 		</dependency>
 	</dependencies>
-	<description>Collection of IJ/Fiji Plugins that I developed.</description>
+	<description>Collection of IJ/Fiji Plugins that I use and develop.</description>
 </project>

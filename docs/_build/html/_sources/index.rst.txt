@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to IJ Plugins's documentation!
-======================================
+IJ Plugins's documentation
+==========================
 
 In the future I will add some useful text here.
 

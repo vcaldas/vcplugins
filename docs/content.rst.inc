@@ -1,21 +1,14 @@
 Getting Started with Plugins
----------------------------
+----------------------------
 
 This documentation will guide you through the basic steps to run ImageJ with the plugins.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   
-   starting/intro
-
-
-- Basic Steps
-
-.. toctree::
-   :maxdepth: 1
 
    starting/instalation
+
 
 Additional Notes
 ----------------

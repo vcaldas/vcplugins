@@ -1,11 +1,32 @@
-Properly Installing Python
-==========================
+Properly Installing IJ Plugins
+==============================
 
-There's a good chance that you already have Python on your operating system.
 
-If so, you do not need to install or configure anything else to use Python.
-Having said that, I would strongly recommend that you install the tools and
-libraries described in the guides below before you start building Python
-applications for real-world use. In particular, you should always install
-Setuptools, Pip, and Virtualenv — they make it much easier for you to use
-other third-party Python libraries.
+The easiest way to stay up to date with the plugins developed is to add the
+repository to Fiji automatic updates. Below, you will learn how to do that.
+
+1 - Go to **Help > Update ...** on the Menubar.
+
+.. image:: ../images/install/fig1.png
+
+It may take some time to fetch all updates.
+
+2 - Inside the **ImageJ Updater** select **Manage update sites**
+
+3 - Select **Add update site** and fill with the following information:
+
+- Name: VuTools (you can fill with any name)
+- URL: http://sites.imagej.net/Vcaldas/
+
+.. image:: ../images/install/fig2.png
+
+You can close this window.
+
+4 - A list of items to download will be displayed. You only need **VCplugins_.jar**. All the others left unselected.
+Hit **Apply changes**.
+
+.. image:: ../images/install/fig3.png
+
+5 - All ready to use!
+
+.. image:: ../images/install/fig4.png
