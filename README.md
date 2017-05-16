@@ -1,4 +1,4 @@
-#  Collection of IJ/Fiji Plugins that I use and develop
+#  Collection of IJ/Fiji Plugins 
 
 * Read the [documentation](http://vcplugins.readthedocs.io/en/latest/)
 * Download the [PDF Manual](https://media.readthedocs.org/pdf/vcplugins/latest/vcplugins.pdf)
