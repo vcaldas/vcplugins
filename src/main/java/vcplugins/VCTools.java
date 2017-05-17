@@ -1,3 +1,4 @@
+package vcplugins;
 /*
  * To the extent possible under law, the ImageJ developers have waived
  * all copyright and related or neighboring rights to this tutorial code.
@@ -8,7 +9,7 @@
 
 import net.imagej.ImageJ;
 
-public class IJPlugins {
+public class VCTools {
 
 	public static void main(final String[] args) {
 		final ImageJ ij = net.imagej.Main.launch(args);

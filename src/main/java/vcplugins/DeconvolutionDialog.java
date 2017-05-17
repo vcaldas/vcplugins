@@ -1,3 +1,4 @@
+package vcplugins;
 /*
  * To the extent possible under law, the ImageJ developers have waived
  * all copyright and related or neighboring rights to this tutorial code.

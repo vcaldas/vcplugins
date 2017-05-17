@@ -1,3 +1,4 @@
+package vcplugins;
 /*
  * To the extent possible under law, the ImageJ developers have waived
  * all copyright and related or neighboring rights to this tutorial code.
@@ -6,25 +7,22 @@
  *     http://creativecommons.org/publicdomain/zero/1.0/
  */
 
-import javax.swing.SwingUtilities;
-
+import net.imagej.ImgPlus;
 import net.imagej.ops.OpService;
 import net.imglib2.RandomAccessibleInterval;
+import net.imglib2.img.Img;
 import net.imglib2.type.numeric.real.FloatType;
 
 import org.scijava.ItemIO;
-import org.scijava.app.StatusService;
 import org.scijava.command.Command;
-import org.scijava.command.CommandService;
 import org.scijava.log.LogService;
 import org.scijava.plugin.Parameter;
 import org.scijava.plugin.Plugin;
-import org.scijava.thread.ThreadService;
 import org.scijava.ui.UIService;
 
 @Plugin(type = Command.class, headless = true,
-	menuPath = "VU>Folsomia Counter")
-public class DeconvolutionCommandSwing implements Command {
+	menuPath = "VU>Deconvolution Command")
+public class DeconvolutionCommand implements Command {
 
 	@Parameter
 	OpService ops;
@@ -36,38 +34,41 @@ public class DeconvolutionCommandSwing implements Command {
 	UIService ui;
 
 	@Parameter
-	CommandService cmd;
+	ImgPlus img;
 
 	@Parameter
-	StatusService status;
+	Double sxy;
 
 	@Parameter
-	ThreadService thread;
+	Double sz;
 
-	private static DeconvolutionDialog dialog = null;
+	@Parameter
+	Integer numIterations;
 
 	@Parameter(type = ItemIO.OUTPUT)
 	RandomAccessibleInterval<FloatType> deconvolved;
 
 	/**
-	 * show a dialog and give the dialog access to required IJ2 Services
+	 * Run the deconvolution process
 	 */
 	@Override
 	public void run() {
+		final Img<FloatType> imgFloat = ops.convert().float32(img);
 
-		SwingUtilities.invokeLater(() -> {
-			if (dialog == null) {
-				dialog = new DeconvolutionDialog();
-			}
-			dialog.setVisible(true);
+		RandomAccessibleInterval<FloatType> psf = null;
 
-			dialog.setOps(ops);
-			dialog.setLog(log);
-			dialog.setStatus(status);
-			dialog.setCommand(cmd);
-			dialog.setThread(thread);
-			dialog.setUi(ui);
+		if (imgFloat.numDimensions() == 3) {
+			psf = ops.create().kernelGauss(new double[] { sxy, sxy, sz },
+				new FloatType());
+		}
+		else {
+			psf = ops.create().kernelGauss(new double[] { sxy, sxy },
+				new FloatType());
+		}
 
-		});
+		log.info("starting deconvolution");
+		deconvolved = ops.deconvolve().richardsonLucy(imgFloat, psf, numIterations);
+		log.info("finished deconvolution");
+
 	}
 }

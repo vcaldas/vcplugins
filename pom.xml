@@ -79,7 +79,7 @@
 	</ciManagement>
 
 	<properties>
-		<main-class>IJPlugins</main-class>
+		<main-class>VCTools</main-class>
 		<license.licenseName>gpl_v3</license.licenseName>
 		<license.copyrightOwners>Victor Caldas.</license.copyrightOwners>
 		<license.projectName>ImageJ Plugins collection.</license.projectName>

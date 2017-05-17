@@ -41,7 +41,7 @@
 
 
 \title{IJ Plugins Documentation}
-\date{May 16, 2017}
+\date{May 17, 2017}
 \release{1.0}
 \author{Victor Caldas}
 \newcommand{\sphinxlogo}{}
@@ -59,79 +59,45 @@ In the future I will add some useful text here.
 
 
 \chapter{Getting Started with Plugins}
-\label{\detokenize{index:welcome-to-ij-plugins-s-documentation}}\label{\detokenize{index:getting-started-with-plugins}}
+\label{\detokenize{index:getting-started-with-plugins}}\label{\detokenize{index:ij-plugins-s-documentation}}
 This documentation will guide you through the basic steps to run ImageJ with the plugins.
 
 
-\section{Introduction}
-\label{\detokenize{starting/intro::doc}}\label{\detokenize{starting/intro:introduction}}
+\section{Properly Installing IJ Plugins}
+\label{\detokenize{starting/instalation:properly-installing-ij-plugins}}\label{\detokenize{starting/instalation::doc}}
+The easiest way to stay up to date with the plugins developed is to add the
+repository to Fiji automatic updates. Below, you will learn how to do that.
 
-\subsection{he State of Python (3 \& 2)}
-\label{\detokenize{starting/intro:he-state-of-python-3-2}}\label{\detokenize{starting/intro:intro}}
-When choosing a Python interpreter, one looming question is always present:
-``Should I choose Python 2 or Python 3''? The answer is a bit more subtle than
-one might think.
+1 - Go to \sphinxstylestrong{Help \textgreater{} Update ...} on the Menubar.
 
-The basic gist of the state of things is as follows:
-\begin{enumerate}
-\item {} 
-Most production applications today use Python 2.7.
+\noindent\sphinxincludegraphics{{fig1}.png}
 
-\item {} 
-Python 3 is ready for the production deployment of applications today.
+It may take some time to fetch all updates.
 
-\item {} 
-Python 2.7 will only receive necessary security updates until 2020 {\color{red}\bfseries{}{[}\#pep373\_eol{]}\_}.
+2 - Inside the \sphinxstylestrong{ImageJ Updater} select \sphinxstylestrong{Manage update sites}
 
-\item {} 
-The brand name ``Python'' encapsulates both Python 3 and Python 2.
-
-\end{enumerate}
-
-
-\subsection{Recommendations}
-\label{\detokenize{starting/intro:recommendations}}
-I'll be blunt:
+3 - Select \sphinxstylestrong{Add update site} and fill with the following information:
 \begin{itemize}
 \item {} 
-Use Python 3 for new Python applications.
+Name: VuTools (you can fill with any name)
 
 \item {} 
-If you're learning Python for the first time, familiarizing yourself with Python 2.7 will be very
-useful, but not more useful than learning Python 3.
-
-\item {} 
-Learn both. They are both ``Python''.
-
-\item {} 
-Software that is already built often depends on Python 2.7.
-
-\item {} 
-If you are writing a new open source Python library, it's best to write it for both Python 2 and 3
-simultaneously. Only supporting Python 3 for a new library you want to be widely adopted is a
-political statement and will alienate many of your users. This is not a problem — slowly, over the next three years, this will become less the case.
+URL: \url{http://sites.imagej.net/Vcaldas/}
 
 \end{itemize}
 
+\noindent\sphinxincludegraphics{{fig2}.png}
 
-\subsection{So.... 3?}
-\label{\detokenize{starting/intro:so-3}}\begin{itemize}
-\item {} 
-Basic Steps
+You can close this window.
 
-\end{itemize}
+4 - A list of items to download will be displayed. You only need \sphinxstylestrong{VCplugins\_.jar}. All the others left unselected.
+Hit \sphinxstylestrong{Apply changes}.
 
+\noindent\sphinxincludegraphics{{fig3}.png}
 
-\section{Properly Installing Python}
-\label{\detokenize{starting/instalation::doc}}\label{\detokenize{starting/instalation:properly-installing-python}}
-There's a good chance that you already have Python on your operating system.
+5 - All ready to use!
 
-If so, you do not need to install or configure anything else to use Python.
-Having said that, I would strongly recommend that you install the tools and
-libraries described in the guides below before you start building Python
-applications for real-world use. In particular, you should always install
-Setuptools, Pip, and Virtualenv — they make it much easier for you to use
-other third-party Python libraries.
+\noindent\sphinxincludegraphics{{fig4}.png}
 
 
 \chapter{Additional Notes}
@@ -141,7 +107,7 @@ background information about Python, then focuses on next steps.
 
 
 \section{The FAQ}
-\label{\detokenize{support/faq::doc}}\label{\detokenize{support/faq:the-faq}}
+\label{\detokenize{support/faq:the-faq}}\label{\detokenize{support/faq::doc}}
 
 \subsection{BDFL}
 \label{\detokenize{support/faq:bdfl}}
