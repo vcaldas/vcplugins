@@ -14,7 +14,7 @@
 
 	<groupId>com.github.vcaldas</groupId>
 	<artifactId>VCPlugins_</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.1.1-SNAPSHOT</version>
 
 	<name>VC ImageJ Plugins and Tools</name>
 	<url>https://github.com/vcaldas/vcplugins</url>
@@ -95,7 +95,7 @@
 	
 	
 	
-<build>
+	<build>
 		<resources>
 			<resource>
 				<directory>${basedir}/src/main/resources</directory>
@@ -129,6 +129,8 @@
 					<mainClass></mainClass>
 				</configuration>
 			</plugin>
+			
+			
 			
 			<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
