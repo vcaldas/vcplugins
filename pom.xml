@@ -158,10 +158,15 @@
 			<groupId>net.imagej</groupId>
 			<artifactId>imagej</artifactId>
 		</dependency>
+		
+		
 		<dependency>
 			<groupId>net.imglib2</groupId>
 			<artifactId>imglib2-ij</artifactId>
 		</dependency>
+		
+		 
 	</dependencies>
+	
 	<description>Collection of IJ/Fiji Plugins that I use and develop.</description>
 </project>

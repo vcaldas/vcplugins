@@ -21,7 +21,7 @@ xw * The MIT License
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.victorcaldas.plugins.fileStacker.gui;
+package plugins.fileStacker.gui;
 
 import java.io.IOException;
 import javafx.application.Application;

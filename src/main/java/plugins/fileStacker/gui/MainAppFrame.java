@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.victorcaldas.plugins.fileStacker.gui;
+package plugins.fileStacker.gui;
 
 import java.io.IOException;
 import javafx.application.Platform;
@@ -35,7 +35,7 @@ import net.imagej.ImageJ;
 import org.scijava.log.LogService;
 import org.scijava.plugin.Parameter;
 
-import com.victorcaldas.plugins.fileStacker.gui.view.RootLayoutController;
+import plugins.fileStacker.gui.view.RootLayoutController;
 
 /**
  * This class is called from the ImageJ plugin.

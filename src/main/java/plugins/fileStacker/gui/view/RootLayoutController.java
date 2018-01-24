@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.victorcaldas.plugins.fileStacker.gui.view;
+package plugins.fileStacker.gui.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
